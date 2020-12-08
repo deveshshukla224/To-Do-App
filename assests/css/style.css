@@ -15,7 +15,7 @@ background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, F
 #container
 {
 width:360px;
-box-shadow: 0 0 3px rgba(0,0,0,0,0.1);
+box-shadow: 0 0 3px rgba(0,0,0,0.1);
 margin:100px auto;
 background-color:#f7f7f7;
 }
@@ -32,17 +32,20 @@ background:#2980b9;
 padding-top:9px;
 padding-bottom:9px;
 padding-left:13px;
+    padding-right: 13px;
 }
 
 input[type="text"]
 {
 width:100%;
+    padding:9px;
+    background: #f7f7f7;
+    border: 3px solid rgba(0,0,0,0);
 }
 
 .fa-plus
 {
 float:right;
-margin-right:2px;
 }
 li
 {
@@ -57,11 +60,28 @@ background:white;
 
 span
 {
+    display: inline-block;
 color:white;
 text-align:center;
 background:#e74c3c;
 height:40px;
 line-height:40px;
 margin-right:20px;
-padding:3px;
+width:0;
+    opacity: 0.0;
+
 }
+li:hover span
+{
+    width:40px;
+    opacity: 1.0;
+    transition:width 0.2s linear;
+}
+
+input:focus
+{
+    background: #fff;
+    border:3.5px solid #2980b9;
+    margin: 0;
+}
+
